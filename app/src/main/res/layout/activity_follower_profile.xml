@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.intcore.intcoretask.custom_views.DrawInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/draw_insets_frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/profile_progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true" />
+
+    <com.intcore.intcoretask.custom_views.ObservableScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/photo_container"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/photo_placeholder">
+                <!--suppress AndroidLintContentDescription -->
+                <ImageView
+                    android:id="@+id/profile_background_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/imd" />
+
+
+            </android.support.design.widget.AppBarLayout>
+
+            <com.intcore.intcoretask.custom_views.MaxWidthLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="200dp"
+                android:background="#fff"
+                android:elevation="2dp"
+                android:maxWidth="@dimen/detail_card_max_width"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/meta_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/detail_metabar_vert_padding"
+                    android:background="#333"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/detail_metabar_vert_padding"
+                    android:paddingLeft="@dimen/detail_inner_horiz_margin"
+                    android:paddingRight="@dimen/detail_inner_horiz_margin"
+                    android:paddingTop="@dimen/detail_metabar_vert_padding">
+
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/imd" />
+
+                    <LinearLayout
+                        android:id="@+id/meta_bar2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="@dimen/detail_metabar_vert_padding"
+                        android:layout_weight="2"
+                        android:background="#333"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/detail_metabar_vert_padding"
+                        android:paddingLeft="@dimen/detail_inner_horiz_margin"
+                        android:paddingRight="@dimen/detail_inner_horiz_margin"
+                        android:paddingTop="@dimen/detail_metabar_vert_padding">
+
+                        <TextView
+                            android:id="@+id/follower_name"
+                            style="?android:attr/textAppearanceLarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/textViewMargin"
+                            android:layout_marginLeft="@dimen/textViewMargin"
+                            android:layout_marginRight="@dimen/textViewMargin"
+                            android:layout_marginTop="@dimen/textViewMargin"
+                            android:fontFamily="sans-serif-condensed"
+                            android:lineSpacingMultiplier="0.9"
+                            android:textColor="@color/titleColor"
+                            android:textSize="@dimen/detail_title_text_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/description"
+                            style="?android:attr/textAppearanceSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/textViewMargin"
+                            android:layout_marginLeft="@dimen/textViewMargin"
+                            android:layout_marginRight="@dimen/textViewMargin"
+                            android:textColor="@color/titleColor" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/tweets_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.intcore.intcoretask.custom_views.MaxWidthLinearLayout>
+        </FrameLayout>
+    </com.intcore.intcoretask.custom_views.ObservableScrollView>
+
+
+</com.intcore.intcoretask.custom_views.DrawInsetsFrameLayout>

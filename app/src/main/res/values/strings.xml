@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TwitterClient</string>
+
+
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">OmCu9cH9ogT95mJEwhSyVCHEZ</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">Zrz5U8udGi9gNA3CmjYRZSPV7FEeszKLh2WDnmcchGgzWPDYn5</string>
+    <string name="login_with_twitter">Log in with Twitter</string>
+
+
+    <string name="action_refresh">Refresh</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share</string>
+
+    <string name="up">Up</string>
+    <string name="content">here is the content....</string>
+</resources>
