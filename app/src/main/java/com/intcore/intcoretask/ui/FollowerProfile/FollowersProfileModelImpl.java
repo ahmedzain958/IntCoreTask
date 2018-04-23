@@ -34,7 +34,6 @@ public class FollowersProfileModelImpl implements FollowersProfileModel {
 
     @Override
     public void getTimeLinesModel(String screenName, ProfileListener profileListener) {
-
         Converter.Factory converter = GsonConverterFactory.create();
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Constants.BASE_URL)
@@ -45,11 +44,11 @@ public class FollowersProfileModelImpl implements FollowersProfileModel {
         UserStatusModel userStatusModel = getUserStatusModel();
 
         String authorization =
-                "OAuth oauth_consumer_key=\"OmCu9cH9ogT95mJEwhSyVCHEZ\",oauth_token=\"986590495731343361-Fegwg2mQVltu0rvutMfwIjpzQN5QTDU\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"1524388638\",oauth_nonce=\"DuiQ366RDe8\",oauth_version=\"1.0\",oauth_signature=\"w2GXR3zd%2FbtvCy0JjNie1XX83Bc%3D\"";
+                "OAuth oauth_consumer_key=\"OmCu9cH9ogT95mJEwhSyVCHEZ\",oauth_token=\"986590495731343361-Fegwg2mQVltu0rvutMfwIjpzQN5QTDU\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"1524451808\",oauth_nonce=\"nEUe41K7IwG\",oauth_version=\"1.0\",oauth_signature=\"ADhhWngYrlHpgG2dSJCR74%2Fti4o%3D\"";
 
 
         final FollowersApi followersApi = retrofit.create(FollowersApi.class);
-        followersApi.getTimeLines(authorization, "Swssb1", 10).enqueue(new Callback<List<TimeLine>>() {//get list of foods
+        followersApi.getTimeLines(authorization, "22mosalah", 10).enqueue(new Callback<List<TimeLine>>() {//get list of foods
             @Override
             public void onResponse(Call<List<TimeLine>> call, Response<List<TimeLine>> response) {
                 if (response != null) {
